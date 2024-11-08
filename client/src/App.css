@@ -1,38 +1,75 @@
-.App {
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Home page */
+.home-page {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 250px 1fr;
+}
+
+.home-page nav {
+  border: 1px solid black;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.home-page nav h1 {
   text-align: center;
+  margin: 20px auto;
+  width: fit-content;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.home-page nav h3 {
+  width: 100%;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  text-align: center;
+  padding: 10px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.home-page .main-section {
+  background-color: rgb(143, 62, 165);
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+}
+
+.home-page .main-section .project-card {
+  background-color: rgba(255, 255, 255, 0.775);
+  border: 1px solid white;
+  height: 14em;
+  width: 23em;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 20px;
+  transition: 0.7s ease;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.home-page .main-section .project-card .project-status {
+  border: 1px solid black;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: red;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo {
+  background-color: red;
+}
+.doing {
+  background-color: yellow;
+}
+.done {
+  background-color: rgb(63, 192, 63);
 }
